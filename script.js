@@ -17,16 +17,6 @@ function move(){
     document.getElementById("shape").style.display = "block";
     document.getElementById("shape").style.backgroundColor = getRandomColor();
     start = new Date().getTime();
-
-    if (Math.random() > 0.5) {
-        shape.style.borderRadius = "50%";  // Circle
-    } 
-    else if (Math.random() > 0.7 >0.9){
-        shape.style.borderRadius = "30% 90%";
-    }
-     else {
-        shape.style.borderRadius = "0% ";   // Square
-    }
 }
 
     function getRandomColor() {
@@ -45,6 +35,6 @@ document.getElementById("shape").onclick = function(){
     document.getElementById("shape").style.display= "none";
     var end = new Date().getTime();
     var timeTaken = (end - start)/1000
-    alert(timeTaken);
+    alert(timeTaken + " seconds");
     move()
 }
